@@ -2,6 +2,7 @@ package br.com.lookao.lookao_api.controller;
 
 import br.com.lookao.lookao_api.entity.Pet;
 import br.com.lookao.lookao_api.repository.PetRepository;
+import br.com.lookao.lookao_api.service.PetService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,9 +15,12 @@ public class PetController {
     @Autowired
     PetRepository petRepository;
 
+    @Autowired
+    PetService petService;
+
     @GetMapping
     public List<Pet> listarPets(){
-        return petRepository.findAll();
+        return petService.listarPets();
     }
 
     @PostMapping
