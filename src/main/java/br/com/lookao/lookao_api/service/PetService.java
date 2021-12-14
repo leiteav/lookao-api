@@ -8,4 +8,6 @@ import java.util.List;
 public interface PetService {
 
     List<Pet> listarPets();
+
+    Pet cadastrarPet(Pet pet);
 }

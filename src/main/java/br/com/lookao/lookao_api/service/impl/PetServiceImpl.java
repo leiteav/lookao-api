@@ -18,4 +18,9 @@ public class PetServiceImpl implements PetService {
     public List<Pet> listarPets() {
         return petRepository.findAll();
     }
+
+    @Override
+    public Pet cadastrarPet(Pet pet) {
+        return petRepository.save(pet);
+    }
 }

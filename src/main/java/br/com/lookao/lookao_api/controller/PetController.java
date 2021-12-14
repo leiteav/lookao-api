@@ -14,9 +14,6 @@ import java.util.List;
 public class PetController {
 
     @Autowired
-    PetRepository petRepository;
-
-    @Autowired
     PetService petService;
 
     @GetMapping
@@ -26,9 +23,7 @@ public class PetController {
 
     @PostMapping("/cadastrar")
     public Pet cadastrarPet(@RequestBody Pet pet){
-        return petRepository.save(pet);
+        return petService.cadastrarPet(pet);
     }
-
-
 
 }
