@@ -18,6 +18,9 @@ public class Pet {
     @Column(name = "nm_pet")
     private String nome;
 
-    @Column(name = "ds_raca")
-    private String raca;
+    @Column(name = "ds_pet")
+    private String dsRaca;
+
+    @OneToOne
+    private Raca raca;
 }

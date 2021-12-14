@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:3000/") //Mateus pediu dia 10/12
+@CrossOrigin(origins = "http://localhost:3000/") // Mateus pediu dia 10/12
 @RestController
 @RequestMapping("/pet")
 public class PetController {
@@ -24,9 +24,11 @@ public class PetController {
         return petService.listarPets();
     }
 
-    @PostMapping
+    @PostMapping("/cadastrar")
     public Pet cadastrarPet(@RequestBody Pet pet){
         return petRepository.save(pet);
     }
+
+
 
 }
