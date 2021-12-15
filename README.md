@@ -1,26 +1,28 @@
-# LOOKÃO-API
-## Descrição do sistema (escopo)
-A plataforma sem fins lucrativos, permite o cadastro de animais perdidos na Baixada
-Santista, mostrando sua última localização, o nome, as características, o telefone de
-contato(opcional), dentre outras opções que facilitarão o encontro do animal.
-Em casos de animais perdidos, poderá ser pesquisado através da região e
-características, auxiliando assim a localização do animal ou do dono.
-Ao abrir o site, o usuário irá inserir todos os dados necessários, como endereço, e
-número de telefone, no qual serão obrigatórios tanto para o cadastro quanto para
-pesquisa,assim facilitando o encontro do animal, ou do dono , e em seguida optar
-por uma das opções como:
-Localizar animal, ou simplesmente cadastrar um animal perdido que foi encontrado,
-ao fazer isso, o usuário irá ser redirecionado para a tela de acordo com o menu
-selecionado, que são “cadastro ou pesquisa”.
-Para cadastrar um animal perdido, é necessário se cadastrar na plataforma, o
-cadastro é simples, fácil, e rápido de se executar. Já para a pesquisa, não será
-necessário efetuar nenhum tipo de login ou cadastro.
-O sistema tem como objetivo auxiliar pessoas que perderam seus animais
-domésticos. Contando com um sistema de anúncio de animais perdidos onde o
-usuário.
+# **LOOKÃO** API
+![img_1.png](img_readme.png)
+</br>
 
+**Lookão** é uma “pataforma” onde temos o objetivo de intermediar a localização de animais perdidos da Baixada Santista, fazendo com que seus donos recuperem seus pets.
+</br></br>
+![AUR last modified](https://img.shields.io/aur/last-modified/lookao-api?style=flat-square)
+![GitHub manifest version](https://img.shields.io/github/manifest-json/v/leiteav/lookao-api)
+## Lookão front-end
+Para acessar o front-end do projeto, clique [aqui](https://github.com/leiteav/lookao-front).
 ## Principais tecnologias utilizadas
 - Java 
 - Spring Boot
 - Maven
 - PostgreSQL
+
+## Para rodar o projeto local
+Após clicar em _fork_, copie o endereço do seu repositório. 
+```
+git clone https://github.com/seuUsuario/lookao-api.git
+```
+
+É necessário uma IDE que no caso recomendamos o [Intellij](https://www.jetbrains.com/pt-br/idea/) ou [Eclipse](https://www.eclipse.org/downloads/), e [PgAdmin](https://www.pgadmin.org/download/)  para startar o projeto, e após o download, devemos configurar a configuração na qual a aplicação irá utilizar localmente. Para isso, set:
+```
+-Dspring.profiles.active=local
+```
+
+> Em caso de dúvidas, contate um de nossos contribuidores.
