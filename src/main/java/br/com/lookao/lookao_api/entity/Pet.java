@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Setter
 @Getter
@@ -13,14 +14,18 @@ public class Pet {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_pet", nullable = false)
-    private Long id;
+    private Long idPet;
 
     @Column(name = "nm_pet")
-    private String nome;
+    private String nomePet;
 
     @Column(name = "ds_pet")
-    private String dsRaca;
+    private String descricaoPet;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_raca")
     private Raca raca;
+
+    @Column(name="dt_cadastro")
+    private LocalDateTime dtCadastro;
 }
