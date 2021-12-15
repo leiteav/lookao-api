@@ -14,10 +14,9 @@ public class Raca {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_raca", nullable = false)
-    private Long id;
+    private Long idRaca;
 
     @Column(name = "nm_raca")
     private String nomeRaca;
-
 
 }
