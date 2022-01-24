@@ -2,6 +2,7 @@ package br.com.lookao.lookao_api.controller;
 
 import br.com.lookao.lookao_api.dto.PetDTO;
 import br.com.lookao.lookao_api.entity.Pet;
+import br.com.lookao.lookao_api.exception.PetNotFoundException;
 import br.com.lookao.lookao_api.repository.PetRepository;
 import br.com.lookao.lookao_api.service.PetService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +28,11 @@ public class PetController {
     @PostMapping("/cadastrar")
     public PetDTO cadastrarPet(@RequestBody Pet pet){
         return petService.cadastrarPet(pet);
+    }
+
+    @GetMapping("/{id}")
+    public PetDTO buscarPetById(@PathVariable final Long id) throws PetNotFoundException {
+        return petService.buscarPetById(id);
     }
 
 }
