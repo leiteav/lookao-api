@@ -1,0 +1,10 @@
+spring:
+  jpa:
+    database: POSTGRESQL
+    hibernate:
+      ddl-auto: create-drop
+  datasource:
+    url: "jdbc:postgresql://localhost:5432/lookao_api"
+    username: "postgres"
+    password: "root"
+    driver-class-name: org.postgresql.Driver
