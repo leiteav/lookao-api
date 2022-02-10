@@ -4,13 +4,12 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 
 @Setter
 @Getter
 @Entity
 @Table(name = "PET")
-public class Pet {
+public class Pet extends Auditoria{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_pet", nullable = false)
@@ -26,6 +25,4 @@ public class Pet {
     @JoinColumn(name = "id_raca")
     private Raca raca;
 
-    @Column(name="dt_cadastro")
-    private LocalDateTime dtCadastro;
 }
