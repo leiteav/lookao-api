@@ -3,3 +3,16 @@ spring:
     generate-ddl: true
   datasource:
     url: ${JDBC_DATASOURCE_URL}
+
+info:
+  app:
+    name: @project.name@
+    groupId: @project.groupId@
+    artifactId: @project.artifactId@
+    version: @project.version@
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "info"
