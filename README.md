@@ -4,8 +4,9 @@
 
 **Lookão** é uma “pataforma” onde temos o objetivo de intermediar a localização de animais perdidos da Baixada Santista, fazendo com que seus donos recuperem seus pets.
 </br></br>
-![AUR last modified](https://img.shields.io/aur/last-modified/lookao-api?style=flat-square)
-![GitHub manifest version](https://img.shields.io/github/manifest-json/v/leiteav/lookao-api)
+![GitHub last commit](https://img.shields.io/github/last-commit/leiteav/lookao)
+![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/leiteav/lookao-api)
+![GitHub top language](https://img.shields.io/github/languages/top/leiteav/lookao-api)
 ## Lookão front-end
 Para acessar o front-end do projeto, clique [aqui](https://github.com/leiteav/lookao-front).
 ## Principais tecnologias utilizadas
