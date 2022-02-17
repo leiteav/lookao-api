@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Getter
 @Entity
 @Table(name = "RACA")
-public class Raca {
+public class Raca extends Auditoria{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
