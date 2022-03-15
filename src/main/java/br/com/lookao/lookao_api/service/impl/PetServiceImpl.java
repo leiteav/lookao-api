@@ -36,7 +36,6 @@ public class PetServiceImpl implements PetService {
 
     @Override
     public PetDTO cadastrarPet(Pet pet) {
-        pet.setDtCadastro(LocalDateTime.now());
         petRepository.save(pet);
         log.info("Pet {} cadastrado com sucesso.", pet.getIdPet());
         PetDTO petDTO = modelMapper.map(pet, PetDTO.class);
