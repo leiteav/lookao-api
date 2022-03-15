@@ -11,10 +11,16 @@ public class Usuario extends Auditoria{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_usuario", nullable = false)
-    private Long idUsuario;
+    private Long id;
 
     @Column(name = "nm_usuario")
-    private String nmUsuario;
+    private String nome;
+
+    @Column(name = "ds_email")
+    private String  email;
+
+    @Column(name = "ds_senha")
+    private String senha;
 
     @OneToMany(mappedBy = "usuario", fetch = FetchType.LAZY)
     private List<Pet> pets;
