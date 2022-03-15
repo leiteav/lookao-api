@@ -20,7 +20,7 @@ public class PetController {
     @Autowired
     PetService petService;
 
-    @GetMapping
+    @GetMapping("/all")
     public List<Pet> listarPets(){
         return petService.listarPets();
     }
