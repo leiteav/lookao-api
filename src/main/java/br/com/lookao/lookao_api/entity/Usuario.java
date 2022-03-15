@@ -6,6 +6,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Data
+@Entity
 public class Usuario extends Auditoria{
 
     @Id
