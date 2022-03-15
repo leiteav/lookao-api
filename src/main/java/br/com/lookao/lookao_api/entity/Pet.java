@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Setter
 @Getter
@@ -24,5 +25,9 @@ public class Pet extends Auditoria{
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_raca")
     private Raca raca;
+
+    @ManyToOne
+    @JoinColumn(name = "id_user")
+    private Usuario usuario;
 
 }
