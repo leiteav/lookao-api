@@ -24,7 +24,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     private static final String USERS_API_URL = "/user/**";
     private static final String PETS_ALL_API_URL = "/pet/all";
-    private static final String PETS_OTHERS_API_URL = "/pet/**";
+    private static final String PETS_REGISTER_API_URL = "/pet/register";
+    private static final String PETS_EDIT_API_URL = "/pet/edit";
     private static final String RACA_API_URL = "/raca/**";
     private static final String SWAGGER_API_URL = "/swagger-ui.html";
 
@@ -57,7 +58,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.csrf().disable()
                 .authorizeRequests().antMatchers(USERS_API_URL, SWAGGER_API_URL).hasAnyAuthority(Perfil.ADMIN.getDescricao())
-                .antMatchers(PETS_OTHERS_API_URL).hasAnyAuthority(Perfil.ADMIN.getDescricao())
+                .antMatchers(PETS_REGISTER_API_URL).hasAnyAuthority(Perfil.ADMIN.getDescricao())
+                .antMatchers(PETS_EDIT_API_URL).hasAnyAuthority(Perfil.ADMIN.getDescricao())
                 .antMatchers(PETS_ALL_API_URL).permitAll()
                 .anyRequest().authenticated()
                 .and().exceptionHandling().authenticationEntryPoint(jwtAuthenticationEntryPoint).and()
