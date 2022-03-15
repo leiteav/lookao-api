@@ -8,5 +8,5 @@ public interface UsuarioService {
 
     void salvarUsuario(Usuario usuario);
 
-    List<Usuario> listarUsuarios();
+    List<Usuario> findAllUsers();
 }

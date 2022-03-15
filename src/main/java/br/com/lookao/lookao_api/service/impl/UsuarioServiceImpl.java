@@ -5,9 +5,11 @@ import br.com.lookao.lookao_api.repository.UsuarioRepository;
 import br.com.lookao.lookao_api.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class UsuarioServiceImpl implements UsuarioService {
 
     @Autowired
@@ -22,7 +24,7 @@ public class UsuarioServiceImpl implements UsuarioService {
     }
 
     @Override
-    public List<Usuario> listarUsuarios() {
-        return null;
+    public List<Usuario> findAllUsers() {
+        return usuarioRepository.findAll();
     }
 }
