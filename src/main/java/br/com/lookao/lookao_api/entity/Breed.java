@@ -8,15 +8,14 @@ import javax.persistence.*;
 @Setter
 @Getter
 @Entity
-@Table(name = "RACA")
-public class Raca extends Auditoria{
+public class Breed extends Auditable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_raca", nullable = false)
-    private Long idRaca;
+    @Column(name = "id_breed", nullable = false)
+    private Long id;
 
-    @Column(name = "nm_raca")
-    private String nomeRaca;
+    @Column(name = "nm_breed")
+    private String name;
 
 }

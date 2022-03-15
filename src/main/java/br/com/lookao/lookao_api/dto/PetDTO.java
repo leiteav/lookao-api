@@ -1,5 +1,6 @@
 package br.com.lookao.lookao_api.dto;
 
+import br.com.lookao.lookao_api.entity.Breed;
 import lombok.*;
 
 import java.time.LocalDateTime;
@@ -11,10 +12,10 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Builder(setterPrefix = "with")
 public class PetDTO {
-    private Long idpet;
-    private String nomePet;
-    private String nomeRaca;
-    private String mensagem;
-    private LocalDateTime dtCadastro;
+    private Long id;
+    private String name;
+    private Breed breed;
+    private String message;
+    private LocalDateTime createdAt;
 }
 

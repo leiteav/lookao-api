@@ -11,28 +11,28 @@ import java.util.Collections;
 
 @AllArgsConstructor
 @Getter
-public class UsuarioAutenticado implements UserDetails {
+public class UserAuthentication implements UserDetails {
 
-    private static final String PERFIL_PREFIX = "PERFIL_";
+    private static final String ROLE_PREFIX = "ROLE_";
 
-    private String nome;
-    private String email;
-    private String senha;
-    private String perfil;
+    private String name;
+    private String mail;
+    private String password;
+    private String role;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return Collections.singletonList(new SimpleGrantedAuthority(PERFIL_PREFIX + perfil));
+        return Collections.singletonList(new SimpleGrantedAuthority(ROLE_PREFIX + role));
     }
 
     @Override
     public String getPassword() {
-        return senha;
+        return password;
     }
 
     @Override
     public String getUsername() {
-        return email;
+        return mail;
     }
 
     @Override

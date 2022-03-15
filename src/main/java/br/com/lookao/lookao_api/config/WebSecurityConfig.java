@@ -1,6 +1,6 @@
 package br.com.lookao.lookao_api.config;
 
-import br.com.lookao.lookao_api.entity.Perfil;
+import br.com.lookao.lookao_api.entity.Role;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -57,9 +57,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.csrf().disable()
-                .authorizeRequests().antMatchers(USERS_API_URL, SWAGGER_API_URL).hasAnyAuthority(Perfil.ADMIN.getDescricao())
-                .antMatchers(PETS_REGISTER_API_URL).hasAnyAuthority(Perfil.ADMIN.getDescricao())
-                .antMatchers(PETS_EDIT_API_URL).hasAnyAuthority(Perfil.ADMIN.getDescricao())
+                .authorizeRequests().antMatchers(USERS_API_URL, SWAGGER_API_URL).hasAnyAuthority(Role.ADMIN.getDescription())
+                .antMatchers(PETS_REGISTER_API_URL).hasAnyAuthority(Role.ADMIN.getDescription())
+                .antMatchers(PETS_EDIT_API_URL).hasAnyAuthority(Role.ADMIN.getDescription())
                 .antMatchers(PETS_ALL_API_URL).permitAll()
                 .anyRequest().authenticated()
                 .and().exceptionHandling().authenticationEntryPoint(jwtAuthenticationEntryPoint).and()

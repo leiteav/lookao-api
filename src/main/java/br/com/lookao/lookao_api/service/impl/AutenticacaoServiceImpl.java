@@ -1,8 +1,8 @@
 package br.com.lookao.lookao_api.service.impl;
 
-import br.com.lookao.lookao_api.entity.Usuario;
-import br.com.lookao.lookao_api.entity.UsuarioAutenticado;
-import br.com.lookao.lookao_api.repository.UsuarioRepository;
+import br.com.lookao.lookao_api.entity.User;
+import br.com.lookao.lookao_api.entity.UserAuthentication;
+import br.com.lookao.lookao_api.repository.UserRepository;
 import br.com.lookao.lookao_api.service.AutenticaoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -14,16 +14,16 @@ import org.springframework.stereotype.Service;
 public class AutenticacaoServiceImpl implements AutenticaoService, UserDetailsService {
 
     @Autowired
-    private UsuarioRepository usuarioRepository;
+    private UserRepository userRepository;
 
     @Override
-    public UserDetails loadUserByUsername(String nome) throws UsernameNotFoundException {
-        Usuario usuario = usuarioRepository.findByNome(nome)
+    public UserDetails loadUserByUsername(String name) throws UsernameNotFoundException {
+        User user = userRepository.findByName(name)
                 .orElseThrow(() ->
-        new UsernameNotFoundException(String.format("Nome de usuário não encontrado", nome)));
+        new UsernameNotFoundException(String.format("Nome de usuário não encontrado", name)));
 
-        return new UsuarioAutenticado(usuario.getNome(),
-                 usuario.getEmail(),
-                 usuario.getSenha(), usuario.getPerfil().getDescricao());
+        return new UserAuthentication(user.getName(),
+                 user.getMail(),
+                 user.getPassword(), user.getRole().getDescription());
     }
 }

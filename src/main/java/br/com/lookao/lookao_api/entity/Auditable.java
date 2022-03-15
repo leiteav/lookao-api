@@ -15,13 +15,13 @@ import java.time.LocalDateTime;
 @Setter
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
-public abstract class Auditoria {
+public abstract class Auditable {
 
     @CreatedDate
-    @Column(name = "dt_criacao")
-    protected LocalDateTime dtCriacao;
+    @Column(name = "dt_created")
+    protected LocalDateTime dtCreated;
 
     @LastModifiedDate
-    @Column(name = "dt_ult_alteracao")
-    protected LocalDateTime dtUltAlteracao;
+    @Column(name = "dt_last_update")
+    protected LocalDateTime dtLastUpdate;
 }
