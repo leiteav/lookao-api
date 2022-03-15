@@ -32,7 +32,7 @@ public class UsuarioAutenticado implements UserDetails {
 
     @Override
     public String getUsername() {
-        return usuario;
+        return email;
     }
 
     @Override
