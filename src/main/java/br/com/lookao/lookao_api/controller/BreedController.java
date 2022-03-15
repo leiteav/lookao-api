@@ -9,7 +9,7 @@ import java.util.List;
 
 @CrossOrigin(origins = "http://localhost:3000/") //Mateus pediu dia 10/12
 @RestController
-@RequestMapping("/breed")
+@RequestMapping("api/v1/breed")
 public class BreedController {
 
     @Autowired

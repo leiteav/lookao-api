@@ -11,7 +11,7 @@ import java.util.List;
 
 @CrossOrigin(origins = "http://localhost:3000/") // Mateus pediu dia 10/12
 @RestController
-@RequestMapping("/pet")
+@RequestMapping("api/v1/pet")
 public class PetController {
 
     @Autowired
