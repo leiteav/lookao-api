@@ -1,5 +1,6 @@
-package br.com.lookao.lookao_api.config;
+package br.com.lookao.lookao_api.config.auth;
 
+import br.com.lookao.lookao_api.config.auth.JwtAuthenticationEntryPoint;
 import br.com.lookao.lookao_api.entity.Role;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package br.com.lookao.lookao_api.config;
+package br.com.lookao.lookao_api.config.auth;
 
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;

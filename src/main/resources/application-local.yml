@@ -15,3 +15,7 @@ management:
       exposure:
         include: "*"
         exclude: "loggers"
+
+jwt:
+  secret: lookao
+  validity: 18000
